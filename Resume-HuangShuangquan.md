@@ -178,7 +178,9 @@ Hulu is strive to give user the best video experience on different devices, my t
 
 #### Build and optimize QoS metric for player    2017.12-2021.05
 QoS is the first priority for HULU since we meet a online accident since 2017, so we did many works to improve our quality including:
-1 .Build core QoS metrics, such as video startup time, video startup failure rate, video playback failure rate, rate of exit before video start, connection introduced rebuffering time, etc.
+
+1. Build core QoS metrics, such as video startup time, video startup failure rate, video playback failure rate, rate of exit before video start, connection introduced rebuffering time, etc.
+
 2. Build unified error handling, classify different errors, define unified error code and messaged. And define actions for different errors, for example for some fatal errors we ask player to stop immediately and for some non-fatal errors we ask player to retry several times before stop.
 3. Collect QoS data and create dashboard on different tools like Glyph and Coviva to keep track of QoS and start investigate asap when QoS degraded.
 4. Utilize big data engines and 3rd party tools like Newrelic, Kibana, Datadog, Presto, etc, to drill down errors to optimize QoS. The general steps including split errors by device model, browser, error type, etc to find out the most suspicious root cause.
@@ -203,35 +205,33 @@ It’s a core and competitive technology of Deepglint to search target in huge a
 Office 365 is a SaaS version of Office runs on a huge cloud, there are many services and our team owns network availability for it for example availability of DNS, data center,  top of rack, and even single machine. My daily work including analyzing log data on Cosmos to provide dashboard, alert on different level, track errors and QoS and cooperate with relative teams to fix issues.
 
 #### Instrument tools for Java application     2013.07-2015.07
-Java agent is a technology that you can insert prob into Java application to get the runtime code stack frame to analyze application performance and errors. We built a Java agent to collect, filter, classify and integrate information from application to show system architecture, performance bottleneck and key nodes to users, so that user can understand low level details and then locate root cause and evaluate test plan. And we can also automatically provide automation test cases and virtual services to users. My works including analyzing different protocols like JMS, Servlet, Rest and WebService etc, and provide relationship between them and provide REST API for them; provide API to create automation test cases and virtual services for specific node; provide API to search runtime status; generate complicate report; analyze memory and cpu bottleneck; utilizing search engine like ELK to improve search performance.
+Java agent is a technology that you can insert prob into Java application to get the runtime code stack frame to analyze application performance and errors. We built a Java agent to collect, filter, classify and integrate information from application to show system architecture, performance bottleneck and key nodes to users, so that user can understand low level details and then locate root cause and evaluate test plan. And we can also automatically provide automation test cases and virtual services to users. 
+
+My works including analyzing different protocols like JMS, Servlet, Rest and WebService etc, and provide relationship between them and provide REST API for them; provide API to create automation test cases and virtual services for specific node; provide API to search runtime status; generate complicate report; analyze memory and cpu bottleneck; utilizing search engine like ELK to improve search performance.
 
 ### Related Links
-Github https://github.com/shuangquanhuang
-
-Personal Website https://shuangquanhuang.github.io/
-
-Algorithms https://github.com/shuangquanhuang/algorithms
-
-LeetCode https://leetcode-cn.com/u/firepaw/
-
-A simple project to show react https://github.com/shuangquanhuang/agorademo
++ Github https://github.com/shuangquanhuang
++ Personal Website https://shuangquanhuang.github.io/
++ Algorithms https://github.com/shuangquanhuang/algorithms
++ LeetCode https://leetcode-cn.com/u/firepaw/
++ A simple project to show react https://github.com/shuangquanhuang/agorademo
 
 ### Self Description
-I have very good basic computer science knowledge including very strong algorithm and design skills, very strong learning quality. I have both backend frontend software development experience, know how to finish project well. I always ask for very high code quality, my code are always very clear and easy to maintain, have strong quality assurance for the products I delivered. Have deep understanding of the the tech I used, be able to keep learning, keep track for the new techniques.
+I have very good computer science knowledge including very strong algorithm and design skills, very strong learning ability. 
 
-I like simple and reliable environment, where we always make sure the product we delivered are fully tested to keep our reputation as well as to reduce ineffective communication, to improve the overall efficiency of the team.
+I have both backend frontend software development experience, and know how to develop projects well. 
+
+I always ask for very high code quality, my code is always very clear and easy to maintain, and I have strong quality assurance for the products I deliver. 
+
+I have a deep understanding of the tech I used, always keep learning and keep tracking for the new techniques.
+
+I like a simple and reliable environment, where we always make sure the products we deliver are fully tested to keep our reputation as well as to reduce ineffective communication, to improve the overall efficiency of the team.
 
 ### Other Information
-Familiar with many coding language like Java, Python, Javascript, Typescript, Go, etc.
-
-Familiar with ELK and big data platform.
-
-Familiar with agile development.
-
-Familiar with architecture design, object oriented design and design patterns, MVVM.
-
-Familiar with database like MySql and SQL language.
-
-Familiar with script on Windows and Linux.
-
-Familiar with lots of algorithm and data structure, rank 100+ on Leetcode.
++ Familiar with many coding language like Java, Python, Javascript, Typescript, Go, etc.
++ Familiar with ELK and big data platform.
++ Familiar with agile development.
++ Familiar with architecture design, object oriented design and design patterns, MVVM.
++ Familiar with database like MySql and SQL language.
++ Familiar with script on Windows and Linux.
++ Familiar with lots of algorithm and data structure, rank 100+ on Leetcode.
