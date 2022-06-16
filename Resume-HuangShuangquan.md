@@ -223,9 +223,15 @@ I like simple and reliable environment, where we always make sure the product we
 
 ### Other Information
 Familiar with many coding language like Java, Python, Javascript, Typescript, Go, etc.
+
 Familiar with ELK and big data platform.
+
 Familiar with agile development.
+
 Familiar with architecture design, object oriented design and design patterns, MVVM.
+
 Familiar with database like MySql and SQL language.
+
 Familiar with script on Windows and Linux.
+
 Familiar with lots of algorithm and data structure, rank 100+ on Leetcode.
