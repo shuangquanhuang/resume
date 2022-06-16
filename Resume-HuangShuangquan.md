@@ -142,6 +142,7 @@
     </div>
   </div>
 </div>
+
 ### Education
 
 | University Name | Time Period |Major | Degree |
@@ -206,9 +207,13 @@ Java agent is a technology that you can insert prob into Java application to get
 
 ### Related Links
 Github https://github.com/shuangquanhuang
+
 Personal Website https://shuangquanhuang.github.io/
+
 Algorithms https://github.com/shuangquanhuang/algorithms
+
 LeetCode https://leetcode-cn.com/u/firepaw/
+
 A simple project to show react https://github.com/shuangquanhuang/agorademo
 
 ### Self Description
