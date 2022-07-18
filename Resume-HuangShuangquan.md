@@ -157,7 +157,7 @@ There are 3 annotation platforms we build from zero: audio annotation platform, 
 
 As lead of the front end project, except normal development work, I also lead the best practice of the project, including tech stack selection, work split, unified code style tools, component split,CI/CD, interface design and integration with backend side, requirement management, code refact, code review and mentor junior Engineers.
 
-Also I extracted some highly reusable components from normal business development to build them as common solution, such as template management, project management, questionnaire component etc. Especially the Questionnaire Component, which is used in some other similar project successfully.
+Also I extracted some highly reusable components from normal business development to build them as common solution, such as template management, project management, questionnaire component etc. Especially the Questionnaire Component(https://github.com/shuangquanhuang/resume/blob/main/Questionnaire.pdf), which is used in some other similar project successfully.
 
 1. I designed them with these principles: clear boundary (only focus on questionnaire), extensible JSON schema, plugin(register your own state machine, components, validators) and interface pattern (use Typescript to ask customized Components/methods implement specific interface) for extension, provide HOOKs and utility functions for user to easily customize.
 2. It’s designed to have two main Components: Builder and Render, with the Builder user can create question template schema, and then use Render to render questions. 
@@ -214,9 +214,13 @@ Java agent is a technology that you can insert prob into Java application to get
 
 ### Related Links
 Github https://github.com/shuangquanhuang
+
 Personal Website https://shuangquanhuang.github.io/
+
 Algorithms https://github.com/shuangquanhuang/algorithms
+
 LeetCode https://leetcode-cn.com/u/firepaw/
+
 A simple project to show react https://github.com/shuangquanhuang/agorademo
 
 ### Self Description
@@ -226,9 +230,15 @@ I like simple and reliable environment, where we always make sure the product we
 
 ### Other Information
 Familiar with many coding language like Java, Python, Javascript, Typescript, Go, etc.
+
 Familiar with ELK and big data platform.
+
 Familiar with agile development.
+
 Familiar with architecture design, object oriented design and design patterns, MVVM.
+
 Familiar with database like MySql and SQL language.
+
 Familiar with script on Windows and Linux.
+
 Familiar with lots of algorithm and data structure, rank 100+ on Leetcode.
