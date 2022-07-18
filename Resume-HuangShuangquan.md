@@ -70,7 +70,7 @@
       Shopee Singapore
     </div>
         <div style="width: 300px; display: table-cell; text-align: start; padding: 0 10px;" >
-      Software Engineer TL
+      Software Engineer Tech Lead
     </div>
   </div>
   <div style="display: table-row">
@@ -152,24 +152,29 @@
 
 
 ### Project Experience
-#### Audio Annotation platform 2022.03-Now
-Audio annotation platform is a web platform to manage templates and tasks for taggers to tag audios.
+#### AI Annotation Platform 2022.03-Now
+There are 3 annotation platforms we build from zero: audio annotation platform, machine translation platform, and commodity annotation platform. They are requested from different business team to tagging items for better AI performance. At the beginning I owned one of the project, and then I designed and built some common solution on it to share with all of the platforms. The basic idea is to dig out the common logic, split business logic and technical logic, and then design a highly extensible solution to make it fit different business requests with the same flow and very few code changes.
 
-As owner of the front end project, except normal development work, I also lead the best practice of the project, including tech stack selection, work split, unified code style tools, component split, CI/CD, interface design and integration with backend side, requirement management, and code refact and code review
+As lead of the front end project, except normal development work, I also lead the best practice of the project, including tech stack selection, work split, unified code style tools, component split,CI/CD, interface design and integration with backend side, requirement management, code refact, code review and mentor junior Engineers.
 
-Thinking and build shared infrastructure for the team to build application easily, for example shared version management, shared auth component, shared UX components.
+Also I extracted some highly reusable components from normal business development to build them as common solution, such as template management, project management, questionnaire component etc. Especially the Questionnaire Component, which is used in some other similar project successfully.
 
-From normal businiess development, I extracted and extended some highly reusable components, such components as a Questionnaire Component, which is used in some other similar projects successfully. The design principles are: clear boundary (only focus on questionnaire), extensible JSON schema, plugin and interface pattern for extension, provide HOOKs and utility functions for user to easily customize.It’s designed to have to main Component: Builder and Render, with Builder user can create question template schema, and then use Render to render questions. Both Components are highly extensible, for example: in Builder you can register customized operators, register your own question type, etc; in Render, questions can be rendered based on DAG conditions, you can register your own single question render component if it follows the interface specification. It’s also exported a StateManager to get the state of current question status, for example, if this question is visible or disabled based on the answer of other questions.
+1. I designed them with these principles: clear boundary (only focus on questionnaire), extensible JSON schema, plugin(register your own state machine, components, validators) and interface pattern (use Typescript to ask customized Components/methods implement specific interface) for extension, provide HOOKs and utility functions for user to easily customize.
+2. It’s designed to have two main Components: Builder and Render, with the Builder user can create question template schema, and then use Render to render questions. 
+3. Both Components ares highly extensible, for example: in Builder you can register customized operators, register your own question type, put extra setting in it, use your own validator, register customized input component, register customized validator etc; In Render, question can be render based on DAG conditions, you can register your own single question render component and input component if it follow the interface specification, you can also register you own input validator.
+4. It also exports a StateMachine to get the state of current question status, for example, decide whether this question is visible or disabled based on the answer of other questions. You can also register your own state machine to manage the states.
+5. Also wrapped them into grouped questionnaire builder and groupped questionnaire render.
 
 #### Chatbot data visualization     2021.05-2022.03
-Chatbot is a bot to chat with customers for solving some common questions. With the bot we hope the custom service can catch up with the increase of custom numbers, and decrease the number of custom service staff, not only for saving cost but also because we can’t hire so many staff. The visualization platform can provide trends of different metrics, and dive into each metrics to find the reasons, to help the operation and tech team to optimize product and strategy to improve customer satisfaction. As the tech lead of frontend project, except normal code work, my work including:
+Chatbot is an bot to chat with customers for solving some common questions, with the bot we wish the custom service can catch up the increasing of custom numbers, and decrease the number of custom service staff, not only for saving cost but also because we can’t hire so many staffs. The visualization platform can provide trend of different metrics, and dive into each metrics to find the reasons, to help operation and teach team to optimize product and strategy to improve customer satisfaction. As the tech lead of frontend project, except normal code work, my work including:
+
 1. Requirement review, tech stack selection, code quality and style management.
 2. Build and maintain the development pipeline on CI/CD.
 3. Lead best practice for React Component design, including balance between controlled/uncontrolled Component, interaction between Components, function component instead of class component, hooks, error handling, state management, etc.
 4. Code style and review, I provided 70% of the code review comments of the project to guide the team members to follow the best practice of React, Typescript etc.
 5. Design and implement the version control management tool: Project Loader, with the loader we can control which version to load in different env, so that we can switch and rollback easily to improve the efficiency.
-6. Design and implement 10+ hooks to reuse the code, especially one hook to encapsulate network requests for unified complex logic such as retry, data formatting and error handling, etc, to reduce bugs.
-7. Designed and shared many Components, such as an AdaptiveCardContainer to wrap cards in a variable width container, and contribute it to the company level library.
+6. Design and implemented 10+ hooks to reuse the code, especially one hooks to encapsulate network request for unified complex logic such as retry, data formatting and error handling, etc, to reduce bugs.
+7. Designed and shared many Components, such as an AdaptiveCardContainer to wrap cards in a variable with container, and contribute it to the company level library.
 
 #### HULU Web and Chromecast Player     2017.12-2021.05
 Hulu is strive to give user the best video experience on different devices, my team owns the video players on web browsers and Chromecast. My work including:
@@ -180,9 +185,7 @@ Hulu is strive to give user the best video experience on different devices, my t
 
 #### Build and optimize QoS metric for player    2017.12-2021.05
 QoS is the first priority for HULU since we meet a online accident since 2017, so we did many works to improve our quality including:
-
-1. Build core QoS metrics, such as video startup time, video startup failure rate, video playback failure rate, rate of exit before video start, connection introduced rebuffering time, etc.
-
+1 .Build core QoS metrics, such as video startup time, video startup failure rate, video playback failure rate, rate of exit before video start, connection introduced rebuffering time, etc.
 2. Build unified error handling, classify different errors, define unified error code and messaged. And define actions for different errors, for example for some fatal errors we ask player to stop immediately and for some non-fatal errors we ask player to retry several times before stop.
 3. Collect QoS data and create dashboard on different tools like Glyph and Coviva to keep track of QoS and start investigate asap when QoS degraded.
 4. Utilize big data engines and 3rd party tools like Newrelic, Kibana, Datadog, Presto, etc, to drill down errors to optimize QoS. The general steps including split errors by device model, browser, error type, etc to find out the most suspicious root cause.
@@ -207,33 +210,25 @@ It’s a core and competitive technology of Deepglint to search target in huge a
 Office 365 is a SaaS version of Office runs on a huge cloud, there are many services and our team owns network availability for it for example availability of DNS, data center,  top of rack, and even single machine. My daily work including analyzing log data on Cosmos to provide dashboard, alert on different level, track errors and QoS and cooperate with relative teams to fix issues.
 
 #### Instrument tools for Java application     2013.07-2015.07
-Java agent is a technology that you can insert prob into Java application to get the runtime code stack frame to analyze application performance and errors. We built a Java agent to collect, filter, classify and integrate information from application to show system architecture, performance bottleneck and key nodes to users, so that user can understand low level details and then locate root cause and evaluate test plan. And we can also automatically provide automation test cases and virtual services to users. 
-
-My works including analyzing different protocols like JMS, Servlet, Rest and WebService etc, and provide relationship between them and provide REST API for them; provide API to create automation test cases and virtual services for specific node; provide API to search runtime status; generate complicate report; analyze memory and cpu bottleneck; utilizing search engine like ELK to improve search performance.
+Java agent is a technology that you can insert prob into Java application to get the runtime code stack frame to analyze application performance and errors. We built a Java agent to collect, filter, classify and integrate information from application to show system architecture, performance bottleneck and key nodes to users, so that user can understand low level details and then locate root cause and evaluate test plan. And we can also automatically provide automation test cases and virtual services to users. My works including analyzing different protocols like JMS, Servlet, Rest and WebService etc, and provide relationship between them and provide REST API for them; provide API to create automation test cases and virtual services for specific node; provide API to search runtime status; generate complicate report; analyze memory and cpu bottleneck; utilizing search engine like ELK to improve search performance.
 
 ### Related Links
-+ Github https://github.com/shuangquanhuang
-+ Personal Website https://shuangquanhuang.github.io/
-+ Algorithms https://github.com/shuangquanhuang/algorithms
-+ LeetCode https://leetcode-cn.com/u/firepaw/
-+ A simple project to show react https://github.com/shuangquanhuang/agorademo
+Github https://github.com/shuangquanhuang
+Personal Website https://shuangquanhuang.github.io/
+Algorithms https://github.com/shuangquanhuang/algorithms
+LeetCode https://leetcode-cn.com/u/firepaw/
+A simple project to show react https://github.com/shuangquanhuang/agorademo
 
 ### Self Description
-I have very good computer science knowledge including very strong algorithm and design skills, very strong learning ability. 
+I have very good basic computer science knowledge including very strong algorithm and design skills, very strong learning quality. I have both backend frontend software development experience, know how to finish project well. I always ask for very high code quality, my code are always very clear and easy to maintain, have strong quality assurance for the products I delivered. Have deep understanding of the the tech I used, be able to keep learning, keep track for the new techniques.
 
-I have both backend frontend software development experience, and know how to develop projects well. 
-
-I always ask for very high code quality, my code is always very clear and easy to maintain, and I have strong quality assurance for the products I deliver. 
-
-I have a deep understanding of the tech I used, always keep learning and keep tracking for the new techniques.
-
-I like a simple and reliable environment, where we always make sure the products we deliver are fully tested to keep our reputation as well as to reduce ineffective communication, to improve the overall efficiency of the team.
+I like simple and reliable environment, where we always make sure the product we delivered are fully tested to keep our reputation as well as to reduce ineffective communication, to improve the overall efficiency of the team.
 
 ### Other Information
-+ Familiar with many coding language like Java, Python, Javascript, Typescript, Go, etc.
-+ Familiar with ELK and big data platform.
-+ Familiar with agile development.
-+ Familiar with architecture design, object oriented design and design patterns, MVVM.
-+ Familiar with database like MySql and SQL language.
-+ Familiar with script on Windows and Linux.
-+ Familiar with lots of algorithm and data structure, rank 100+ on Leetcode.
+Familiar with many coding language like Java, Python, Javascript, Typescript, Go, etc.
+Familiar with ELK and big data platform.
+Familiar with agile development.
+Familiar with architecture design, object oriented design and design patterns, MVVM.
+Familiar with database like MySql and SQL language.
+Familiar with script on Windows and Linux.
+Familiar with lots of algorithm and data structure, rank 100+ on Leetcode.
