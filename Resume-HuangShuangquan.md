@@ -32,7 +32,7 @@
       Phone:
     </div>
     <div style="width: 600px; display: table-cell; text-align: start; padding: 0 10px;" >
-      +86-17701332388
+      +86-17701332388/+65-93882883
     </div>
   </div>
   <div style="display: table-row">
@@ -53,6 +53,7 @@
   </div>
 </div>
 
+
 ### Work Experience
 
 <div style="display: table">
@@ -70,7 +71,7 @@
       Shopee Singapore
     </div>
         <div style="width: 300px; display: table-cell; text-align: start; padding: 0 10px;" >
-      Software Engineer Tech Lead
+      Expert Software Engineer
     </div>
   </div>
   <div style="display: table-row">
@@ -143,6 +144,7 @@
   </div>
 </div>
 
+
 ### Education
 
 | University Name | Time Period |Major | Degree |
@@ -152,16 +154,16 @@
 
 
 ### Project Experience
-#### AI Annotation Platform 2022.03-Now
-There are 3 annotation platforms we build from zero: audio annotation platform, machine translation platform, and commodity annotation platform. They are requested from different business teams to tag items for better AI performance. At the beginning I owned one of the projects, and then I designed and built some common solutions on it to share with all of the platforms. The basic idea is to dig out the common logic, split business logic and technical logic, and then design a highly extensible solution to make it fit different business requests with the same flow and very few code changes, reduced code effort as well as improved the product quality and stability.
+#### AI Engineering Platform 2022.03-Now
+There are 3 annotation platforms we build from zero: audio annotation platform, machine translation platform, and computer assistant translation platform. They are requested from different business teams to tag items and quality checks for better AI performance. At the beginning I owned one of the projects, and then aligned some common architecture designs on different projects especially layered design and BFF like design, to make the project maintainable and easier to develop even if the frontend developer is not familiar with the business logic so well. I also designed and built some common solutions to share with all of the platforms, the basic idea is to dig out the common requirements, split business logic and technical logic, and then design some highly extensible solutions to make them fit different business requests with the same flow and very few code changes, reduced code effort as well as improved the product quality and stability.
 
-As lead of the front end project, except normal development work, I also lead the best practice of the project, including tech stack selection, work split, unified code style tools, component split,CI/CD, interface design and integration with backend side, requirement management, code refact, code review and mentor junior Engineers.
+As lead of the front end project, except normal development work, I also lead the best practice of the project, including tech stack selection, work split, unified code style tools, component split, CI/CD, git commit and push hooks, interface design and integration with backend side, requirement management, code refact, code review and mentor junior engineers.
 
-Also I extracted some highly reusable components from normal business development to build them as common solution, such as template management, project management, questionnaire component etc. Especially the Questionnaire Component(https://github.com/shuangquanhuang/resume/blob/main/Questionnaire.pdf), which is used and proved very valuable in different projects.
+Also I extracted some highly reusable components from normal business development to build them as common solution, such as template management, project management, questionnaire component etc. Especially the Questionnaire Component(https://github.com/shuangquanhuang/resume/blob/main/Questionnaire.pdf), which is much more than a component design but a complete solution with high extensibility, and I had cooperated with leaders and PMs to successfully applied into some related projects to proved it's value, and it's has very high potential to extend to company level solutions. Here I'd like to introduce some highlights are:
 
-1. I designed them with these principles: clear boundary (only focus on questionnaire), extensible JSON schema, plugin(register your own state machine, components, validators) and interface pattern (use Typescript to ask customized Components/methods implement specific interface) for extension, provide HOOKs and utility functions for user to easily customize.
-2. It’s designed to have two main Components: Builder and Render, with the Builder user can create question template schema, and then use Render to render questions. 
-3. Both Components ares highly extensible, for example: in Builder you can register customized operators, register your own question type, put extra setting in it, use your own validator, register customized input component, register customized validator etc; In Render, question can be render based on DAG and logic expressions, you can register your own single question render component and input component if it follow the interface specification, you can also register you own input validator.
+1. I designed it with these principles: clear boundary (only focus on questionnaire), minimize external dependencies and assumptions about the use environment, extensible schema design, plugin(register your own state machine, components, validators) and interface pattern (use Typescript to ask customized Components/methods implement specific interface) for extension, provide HOOKs and utility functions for user to easily customize.
+2. It’s designed to have two main Components: Builder and Render, with the Builder user can create questionnaire template schema, and then use Render to render questions. 
+3. Both Components ares highly extensible, for example: in Builder you can register customized operators, register your own question type, add you own extra settings, use your own validator, register customized input component, register customized validator etc; In Render, question can be render based on DAG and logic expressions, you can register your own single question render component and input component if it follow the interface specification, you can also register you own result validator.
 4. It also exports a StateMachine to get the state of current questionnaire, for example, decide whether this question is visible or disabled based on the answer of other questions. You can also register your own state machine to manage the states.
 5. Exports lots of utility functions to help user to add customized components, validators, etc.
 6. Also wrapped them into grouped questionnaire builder and groupped questionnaire render.
@@ -227,25 +229,21 @@ A simple project to show react https://github.com/shuangquanhuang/agorademo
 ### Self Description
 I have very good basic computer science knowledge including very strong algorithm and design skills, very strong learning quality. 
 
-I have both backend frontend software development experience, know how to finish project well.
+I have both backend frontend software development experience, have good understanding about how to complete project well.
 
 I always ask for very high code quality, my code are always very clear and easy to maintain, have strong quality assurance for the products I delivered.
 
-I bave deep understanding of the the tech I used, be able to keep learning, keep track for the new techniques.
+I have deep understanding of the the tech I used, be able to keep learning, keep track for the new techniques.
 
 I like simple and reliable environment, where we always make sure the product we delivered are fully tested to keep our reputation as well as to reduce ineffective communication, to improve the overall efficiency of the team.
 
 ### Other Information
 Familiar with many coding language like Java, Python, Javascript, Typescript, Go, etc.
 
-Familiar with ELK and big data platform.
-
 Familiar with agile development.
 
 Familiar with architecture design, object oriented design and design patterns, MVVM.
 
 Familiar with database like MySql and SQL language.
-
-Familiar with script on Windows and Linux.
 
 Familiar with lots of algorithm and data structure, rank 100+ on Leetcode.
